@@ -58,15 +58,24 @@ export const DAMAGE_VIEW = {
 } as const;
 
 const DOMAIN = {
-    LOCAL_HOST: `https://localhost:7234`
+    LOCAL_HOST_API: `https://localhost:5000`,
+    XSERVER_API: `https://try-the-work.net`
 }
 
 export const URL = {
-    INIT_MONSTERS: `${DOMAIN.LOCAL_HOST}/api/battle/init`,
-    BET_RATE: `${DOMAIN.LOCAL_HOST}/api/battle/betRate`,
-    BATTLE_NEXT_TURN: `${DOMAIN.LOCAL_HOST}/api/battle/nextTurn`,
-    RECORD_BATTLE_RESULT: `${DOMAIN.LOCAL_HOST}/api/battle/recordResults`,
-    INIT_BATTLE_REPORT: `${DOMAIN.LOCAL_HOST}/api/battleReport/init`,
-    MONSTER_REPORTS: `${DOMAIN.LOCAL_HOST}/api/battleReport/monsterReport`,
-    BATTLE_REPORTS: `${DOMAIN.LOCAL_HOST}/api/battleReport/battleReport`
+    // INIT_MONSTERS: `${DOMAIN.LOCAL_HOST_API}/api/battle/init`,
+    // BET_RATE: `${DOMAIN.LOCAL_HOST_API}/api/battle/betRate`,
+    // BATTLE_NEXT_TURN: `${DOMAIN.LOCAL_HOST_API}/api/battle/nextTurn`,
+    // RECORD_BATTLE_RESULT: `${DOMAIN.LOCAL_HOST_API}/api/battle/recordResults`,
+    // INIT_BATTLE_REPORT: `${DOMAIN.LOCAL_HOST_API}/api/battleReport/init`,
+    // MONSTER_REPORTS: `${DOMAIN.LOCAL_HOST_API}/api/battleReport/monsterReport`,
+    // BATTLE_REPORTS: `${DOMAIN.LOCAL_HOST_API}/api/battleReport/battleReport`
+
+    INIT_MONSTERS: `${DOMAIN.XSERVER_API}/api/battle/init`,
+    BET_RATE: `${DOMAIN.XSERVER_API}/api/battle/betRate`,
+    BATTLE_NEXT_TURN: `${DOMAIN.XSERVER_API}/api/battle/nextTurn`,
+    RECORD_BATTLE_RESULT: `${DOMAIN.XSERVER_API}/api/battle/recordResults`,
+    INIT_BATTLE_REPORT: `${DOMAIN.XSERVER_API}/api/battleReport/init`,
+    MONSTER_REPORTS: `${DOMAIN.XSERVER_API}/api/battleReport/monsterReport`,
+    BATTLE_REPORTS: `${DOMAIN.XSERVER_API}/api/battleReport/battleReport`
 } as const;

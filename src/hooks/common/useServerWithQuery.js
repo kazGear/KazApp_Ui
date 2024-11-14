@@ -2,11 +2,16 @@ import { useCallback } from "react";
 
 export const useServerWithQuery = () => {
      // モンスター登場。モンスター数は引数で調整
-     const useServerWithQuery = useCallback(async (urlWithQuery: string) => {
+     const useServerWithQuery = useCallback(async (urlWithQuery) => {
         try {
+            const option = {
+                method: "POST",
+                mode: "cors",
+                headers: { "Content-Type": "application/json" },
+            };
             // urlパラメータで送信
             const response = await fetch(
-                urlWithQuery, {method: "POST"}
+                urlWithQuery, option
             );
             const result = await response.json();
             return result;
