@@ -10,11 +10,15 @@ const SmenuTitle = styled.h2`
 `;
 
 interface ArgProps {
-    title: string;
+    title: string
+    styleObj?: React.CSSProperties;
 }
 
-const MenuTitle = ({title}: ArgProps) => {
-    return <SmenuTitle className="ripple">{title}</SmenuTitle>;
+const MenuTitle = ({title, styleObj}: ArgProps) => {
+    return <SmenuTitle className="ripple"
+                       style={styleObj}>
+                {title}
+            </SmenuTitle>;
 };
 
 export default MenuTitle;

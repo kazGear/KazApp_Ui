@@ -68,7 +68,6 @@ const BattleResultPage = () => {
                 + `?battleScale=${battleScale}&from=${from}&to=${to}`
             );
         setBattleReport(battleReport);
-        battleReport.forEach(e => console.log(e));
     }, [battleScale, from, to]);
 
     const changeBattleScaleHandler = (e: ChangeEvent<HTMLSelectElement>) => {

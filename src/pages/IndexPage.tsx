@@ -16,9 +16,17 @@ const SpDescription = styled.p`
 `;
 
 const IndexPage = () => {
+
     return (
         <>
             <SdivLinkFrame>
+                <Slink to={"/"}>
+                    <MenuTitle title={"ユーザー（ 工事中 ）"} styleObj={{color: "gray"}}/>
+                </Slink>
+                <SpDescription>
+                    制作中・・・ ユーザ登録、ログイン、検索 ...
+                </SpDescription>
+
                 <Slink to={"/battlePage"}>
                     <MenuTitle title={"モンスタ－闘技場"} />
                 </Slink>
@@ -36,22 +44,15 @@ const IndexPage = () => {
                     その戦績レポートを閲覧できます。
                 </SpDescription>
 
-                <Slink to={"/"}>
-                    <MenuTitle title={"（ 工事中 ）"} />
+                <Slink to={"/"} >
+                    <MenuTitle title={"ショップ（ 工事中 ）"} styleObj={{color: "gray"}}/>
                 </Slink>
                 <SpDescription>
-                    制作中...。
-                </SpDescription>
-
-                <Slink to={"/"}>
-                    <MenuTitle title={"（ 工事中 ）"} />
-                </Slink>
-                <SpDescription>
-                    制作中...。
+                    制作予定・・・ モンスターセット、スキルセットの開放、アイテム ...
                 </SpDescription>
             </SdivLinkFrame>
 
-            <TestPageLinks />
+            {/* <TestPageLinks /> */}
         </>
     );
 };

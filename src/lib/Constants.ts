@@ -57,25 +57,19 @@ export const DAMAGE_VIEW = {
     DAMAGE_END: 2500,
 } as const;
 
-const DOMAIN = {
-    LOCAL_HOST_API: `https://localhost:5000`,
-    XSERVER_API: `https://try-the-work.net`
+// 環境でドメインが変化
+export const DOMAIN = {
+    LOCAL_HOST_API: `http://localhost:5000`,
+    XSERVER_API: `https://try-the-work.net`,
 }
-
+// ドメインを決定
+const ENVIRONMENT = DOMAIN.XSERVER_API;
 export const URL = {
-    // INIT_MONSTERS: `${DOMAIN.LOCAL_HOST_API}/api/battle/init`,
-    // BET_RATE: `${DOMAIN.LOCAL_HOST_API}/api/battle/betRate`,
-    // BATTLE_NEXT_TURN: `${DOMAIN.LOCAL_HOST_API}/api/battle/nextTurn`,
-    // RECORD_BATTLE_RESULT: `${DOMAIN.LOCAL_HOST_API}/api/battle/recordResults`,
-    // INIT_BATTLE_REPORT: `${DOMAIN.LOCAL_HOST_API}/api/battleReport/init`,
-    // MONSTER_REPORTS: `${DOMAIN.LOCAL_HOST_API}/api/battleReport/monsterReport`,
-    // BATTLE_REPORTS: `${DOMAIN.LOCAL_HOST_API}/api/battleReport/battleReport`
-
-    INIT_MONSTERS: `${DOMAIN.XSERVER_API}/api/battle/init`,
-    BET_RATE: `${DOMAIN.XSERVER_API}/api/battle/betRate`,
-    BATTLE_NEXT_TURN: `${DOMAIN.XSERVER_API}/api/battle/nextTurn`,
-    RECORD_BATTLE_RESULT: `${DOMAIN.XSERVER_API}/api/battle/recordResults`,
-    INIT_BATTLE_REPORT: `${DOMAIN.XSERVER_API}/api/battleReport/init`,
-    MONSTER_REPORTS: `${DOMAIN.XSERVER_API}/api/battleReport/monsterReport`,
-    BATTLE_REPORTS: `${DOMAIN.XSERVER_API}/api/battleReport/battleReport`
+    INIT_MONSTERS: `${ENVIRONMENT}/api/battle/init`,
+    BET_RATE: `${ENVIRONMENT}/api/battle/betRate`,
+    BATTLE_NEXT_TURN: `${ENVIRONMENT}/api/battle/nextTurn`,
+    RECORD_BATTLE_RESULT: `${ENVIRONMENT}/api/battle/recordResults`,
+    INIT_BATTLE_REPORT: `${ENVIRONMENT}/api/battleReport/init`,
+    MONSTER_REPORTS: `${ENVIRONMENT}/api/battleReport/monsterReport`,
+    BATTLE_REPORTS: `${ENVIRONMENT}/api/battleReport/battleReport`,
 } as const;
